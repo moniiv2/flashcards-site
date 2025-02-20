@@ -1,0 +1,39 @@
+body {
+    background-color: black;
+    padding: 5rem 3rem;
+}
+
+.main {
+    border: 4px black solid;
+    border-radius: 2rem;
+    padding: 3rem 1rem;
+    background-color: white;
+    align-self: center;
+    justify-self: center;
+}
+
+.header {
+    border-bottom: 2px grey solid;
+    margin-bottom: 45px;
+}
+
+.instructions-section p {
+    font-style: italic;
+    font-weight: 700;
+    font-size: large;
+}
+
+.add {
+    font-size: large;
+    padding: 1rem 0.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    align-self: right;
+}
+
+input {
+    font-size: medium;
+    padding: 0.5rem 0.8rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}

@@ -1,0 +1,14 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.courses-list {
+    display: grid;
+    grid-auto-rows: auto;
+    margin-bottom: 1.5rem;
+}
+
+.course-00 {
+    border-bottom: 1px solid grey;
+}
