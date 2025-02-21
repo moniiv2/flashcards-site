@@ -1,0 +1,34 @@
+.flash-q {
+    display: flex;
+    flex-direction: column;
+    min-height: 79%;
+    text-align: center;
+}
+
+#show, .retry, .next {
+    font-size: medium;
+    padding: 1rem 0.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 5px 5px 3px grey; 
+    background-color: #e6e6fa;
+}
+
+#show {
+    margin: 0 auto;
+    display: block;
+}
+#show:active, .retry:active, .next:active {
+    transform: translateY(4px);
+}
+
+.answer {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+}
+
+.next {
+    text-align: right;
+}

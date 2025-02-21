@@ -6,21 +6,48 @@
     <title>Learning My Courses!</title>
     <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="learn-courses.css">
+    <link rel="website icon" type="png" href="flash-images/site-logo.jpg">
 </head>
 <body>
+    <style>
+        body{
+            background-image: url("flash-images/bg-5.jpg");
+        }
+        .main {
+            background-color: #e0c4c8;
+        }
+        .practice, .add-q {
+            background-color: #e6e6fa;
+        }
+    </style>
     <div class="main">
         <div class="header"><h2>Course_Name</h2>
         </div>
         <p id="quest-intro">Your set questions will appear here...</p> 
+        <!-- i should be able to add questions oo -->
         <button class="add-q">
             <i></i>
             Add questions
         </button>
+        <!-- the questions should be in LIFO order -->
         <div class="questions">
             <p class="question-00"><a href="">what is your name?</a></p>
             <p class="question-00"><a href="">what is your name?</a></p>
             <p class="question-00"><a href="">what is your name?</a></p>
         </div>
+
+        <div class="add-questions">
+            <h3>Add questions...</h3>
+            <input type="text" placeholder="question?">
+            <input type="text" placeholder="answer...">
+            <!-- this would add my question and refresh the page -->
+            <button class="add-q">
+                <i></i>
+                Add!
+            </button>
+        </div>
+
+        <!-- this shoud take me to the practising page to show and next question i.e you need a page for this-->
         <button class="practice">
             <i></i>
             Start Practicing
