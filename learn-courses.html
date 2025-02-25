@@ -20,28 +20,34 @@
             background-color: #e6e6fa;
         }
     </style>
+
+    <div class="out">
+        <i></i>
+        back
+    </div>
+
     <div class="main">
-        <div class="header"><h2>Course_Name</h2>
+        <div class="header js-header"><h2>Course_Name</h2>
         </div>
         <p id="quest-intro">Your set questions will appear here...</p> 
         <!-- i should be able to add questions oo -->
-        <button class="add-q">
+        <button class="add-q js-add-q">
             <i></i>
             Add questions
         </button>
         <!-- the questions should be in LIFO order -->
-        <div class="questions">
-            <p class="question-00"><a href="">what is your name?</a></p>
-            <p class="question-00"><a href="">what is your name?</a></p>
-            <p class="question-00"><a href="">what is your name?</a></p>
+        <div class="questions js-questions">
+            <p class="question-00"><a href="">what is your name?</a></p> <i>delete</i> 
+            <p class="question-00"><a href="">what is your name?</a></p> <i>delete</i> 
+            <p class="question-00"><a href="">what is your name?</a></p> <i>delete</i> 
         </div>
 
-        <div class="add-questions">
+        <div class="add-questions js-add-questions">
             <h3>Add questions...</h3>
-            <input type="text" placeholder="question?">
-            <input type="text" placeholder="answer...">
+            <input class = 'js-question' type="text" placeholder="question?">
+            <input class = 'js-answer' type="text" placeholder="answer...">
             <!-- this would add my question and refresh the page -->
-            <button class="add-q">
+            <button class="add-q js-addq">
                 <i></i>
                 Add!
             </button>
@@ -53,5 +59,9 @@
             Start Practicing
         </button>
     </div>
+
+    
+
+    <script src="learn-courses.js" type="module"></script>
 </body>
 </html>

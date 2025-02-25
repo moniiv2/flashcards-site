@@ -19,6 +19,15 @@
             background-color: #e6e6fa;
         }
     </style>
+
+    <div class="out">
+        <i></i>
+    </div> 
+    <div class="js-done">
+        <i>all done</i>
+        <!-- this button sholud take me to the welcome back page -->
+    </div>
+
     <div class="main">
         <div class="header"><h2>Add Your Courses</h2></div>
         <div class="details">
@@ -30,12 +39,14 @@
                     <li><input type="text" placeholder="extra info?" id="course-info"></li>
                 </ol>
             </div>
-            <!-- this button should take me to the welcome back page and display my course -->
-            <button class="add">
+            <!-- this button should add only -->
+            <button class="add js-add1">
                 <i></i>
                 Add!
             </button>
         </div>
     </div>
+
+    <script src="add-courses.js" type="module"></script>
 </body>
 </html>

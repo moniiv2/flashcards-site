@@ -10,6 +10,13 @@ p {
     font-size: 1.2rem;
 }
 
+i {
+    cursor: pointer;
+}
+/* 
+    when you click an icon make it have a dashed border effect instead of the button click effect - idea from figma
+*/
+
 .main {
     border: 1px black solid;
     border-radius: 1.6rem;
