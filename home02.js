@@ -1,4 +1,4 @@
-import { getCourse } from "./general.js"
+import { getCourse, nextPage } from "./general.js"
 
 let courses = JSON.parse(localStorage.getItem('flash-courses'))
 console.log(courses)
@@ -14,13 +14,19 @@ courses.forEach((course, index) => {
     }
 
     coursesSummary += `
-        <a href="learn-courses.html?courseIndex=${index}">
+        
             <div class="course-00">
-                <h3>${currentCourse.courseName}</h3>
-                <p class="notes">note: ${currentCourse.note}</p> 
-                <i>delete</i>
+                <div>
+                    <a href="learn-courses.html?courseIndex=${index}">
+                        <h3>${currentCourse.courseName}</h3>
+                        <p class="notes">note: ${currentCourse.note}</p>
+                    </a>
+                </div>
+                <div class='del-butt'><i class="del">delete</i></div>
             </div>
-        </a>
+        
     `
 })
 document.querySelector('.js-courselist').innerHTML = coursesSummary
+
+nextPage('.js-add', 'add-courses.html')

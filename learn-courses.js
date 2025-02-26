@@ -1,17 +1,24 @@
-import { scrollToSection, getCourse, saveCourses } from "./general.js"
+import { scrollToSection, getCourse, nextInput, nextPage } from "./general.js"
 
 let courses = JSON.parse(localStorage.getItem('flash-courses'))
 console.log(courses)
+
+function saveCourses (courses) {
+    localStorage.setItem('flash-courses', JSON.stringify(courses))
+}
 
 console.log(getCourse(1).courseName)
 
 
 const url = new URL(window.location.href)
 const courseIndex = JSON.parse(url.searchParams.get('courseIndex'))
+//console.log(courseIndex)
 
 const currentCourse = getCourse(courseIndex)
+console.log(currentCourse)
 const courseName = currentCourse.courseName
 let courseQuestions = currentCourse.questions
+console.log(courseQuestions)
 
 let newHeader = `
     <h2>${courseName}</h2>
@@ -29,12 +36,14 @@ if (!courseQuestions) {
 } else {
 courseQuestions.forEach((question, index) => {
     questionsSummary += `
+      <div class = 'question-container'>
         <p class="question-00">
         <a href="">
         ${question.question}
         </a>
         </p> 
-        <i>delete</i> 
+        <i class = 'del'>delete</i> 
+      </div>
     `
 })
 document.querySelector('.js-questions').innerHTML = questionsSummary
@@ -52,16 +61,18 @@ document.querySelector('.js-addq').addEventListener('click', () => {
     console.log(answer)
 
     if (question !== '' && answer !== '') {
-        currentCourse.questions.push (
+        courseQuestions.push (
             {
                 question,
                 answer
             }
         )
 
-        console.log(courses)
+        console.log(currentCourse)
         
-        saveCourses()
+        //update the course in the courses array with the modified course
+        courses[courseIndex] = currentCourse
+        saveCourses(courses)
 
         document.querySelector('.js-question').value = ''
         document.querySelector('.js-answer').value = ''
@@ -72,9 +83,14 @@ document.querySelector('.js-addq').addEventListener('click', () => {
     }
 })
 
+nextInput()
+
 document.querySelector('.js-add-q').addEventListener('click', () => {
     scrollToSection('.js-add-questions')
 })
+
+nextPage('.js-out', 'home02.html')
+nextPage('.js-practice', `flash!.html?courseIndex=${courseIndex}`)
 
 //next us is start practicing buttons
 

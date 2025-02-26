@@ -26,10 +26,22 @@ a {
     margin-bottom: 30px;
 }
 
-.question-00 {
+.question-container {
     border-bottom: 1px grey solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question-00 {
     font-size: 1.5rem;
     font-style: italic;
+    flex-grow: 1;
+}
+
+.del {
+    cursor: pointer;
+    margin-left: 10px;
 }
 
 .add-questions {

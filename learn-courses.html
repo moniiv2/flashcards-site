@@ -21,7 +21,7 @@
         }
     </style>
 
-    <div class="out">
+    <div class="out js-out">
         <i></i>
         back
     </div>
@@ -37,9 +37,15 @@
         </button>
         <!-- the questions should be in LIFO order -->
         <div class="questions js-questions">
-            <p class="question-00"><a href="">what is your name?</a></p> <i>delete</i> 
-            <p class="question-00"><a href="">what is your name?</a></p> <i>delete</i> 
-            <p class="question-00"><a href="">what is your name?</a></p> <i>delete</i> 
+            <div class="question-container">
+                <p class="question-00"><a href="">what is your name?</a></p> <i class="del">delete</i> 
+            </div>
+            <div class="question-container">
+                <p class="question-00"><a href="">what is your name?</a></p> <i class="del">delete</i> 
+            </div>
+            <div class="question-container">
+                <p class="question-00"><a href="">what is your name?</a></p> <i class="del">delete</i> 
+            </div>
         </div>
 
         <div class="add-questions js-add-questions">
@@ -54,7 +60,7 @@
         </div>
 
         <!-- this shoud take me to the practising page to show and next question i.e you need a page for this-->
-        <button class="practice">
+        <button class="practice js-practice">
             <i></i>
             Start Practicing
         </button>
