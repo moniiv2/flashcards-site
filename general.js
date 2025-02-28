@@ -1,3 +1,4 @@
+
 let courses = JSON.parse(localStorage.getItem('flash-courses'))
 //console.log(courses)
 
@@ -49,6 +50,7 @@ export function getCourse (courseIndex) {
     })
     return matchingCourse
 }
+
 /*
 export function saveCourses () {
     localStorage.setItem('flash-courses', JSON.stringify(courses))
@@ -74,6 +76,11 @@ export function nextInput () {
             }
         })
     })
+}
+
+export function del (delIndex, soq) {
+    let newSoq = soq.toSpliced(delIndex, 1)
+    return newSoq
 }
 
 //add a find funtion...

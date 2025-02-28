@@ -6,6 +6,10 @@
     <title>Home</title>
     <link rel="stylesheet" href="general.css">
     <link rel="website icon" type="png" href="flash-images/site-logo.jpg">
+    <script src="https://kit.fontawesome.com/dc504b25b1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
     <!-- <style>
         .main {
@@ -55,20 +59,20 @@
     </style>
 
     <div class="main">
-        <div class="header"><h1>Flash Learning!</h1></div>
+        <div class="header"><h1>FlashLearn!</h1></div>
         <div class="body-area">
             <h3>Hello and Welcome!</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente voluptates cum quam aut voluptatem hic nisi corporis vel odit, alias esse totam quas quidem tenetur excepturi provident quibusdam accusamus perferendis!</p>
+            <p>Tired of endless rote memorization? FlashLearn transforms studying into an enjoyable and effective experience. Build custom flashcard sets tailored to your specific needs, and track your progress with our detailed analytics. Our platform goes beyond simple flashcards, offering various study modes, including multiple choice, typing, and even collaborative study sessions with friends. Join a thriving community of students who are acing their studies with our powerful flashcard tool. We're here to support your learning journey every step of the way.</p>
             <div class="instructions-section">
                 <p>Instructions...</p>
                 <p>
                     <ol>
                         <li>first, to add a course, click on the plus button on the right corner...</li>
                         <li>
-                            name your course
+                            name your course, when you're done adding all your courses...
                         </li>
                         <li>
-                            add related questions thet you'd love to revise frequently by clicking the 'add questions' button
+                            you can click on each course to add related questions you'd love to revise frequently by clicking the 'add questions' button
                         </li>
                         <li>
                             after adding all your questions, let the fun learning begin!
@@ -78,15 +82,15 @@
             </div>
             <!-- this should take me to add course page i.e the courses html -->
             <button class="add">
-                <i></i>
-                Add your courses
+                <i class="fa-solid fa-plus"></i>
+                
             </button>
         </div>
     </div>
 
     <script>
         document.querySelector('.add').addEventListener('click', () => {
-            window.location.href = 'courses.html'
+            window.location.href = 'add-courses.html'
         })
     </script>
 

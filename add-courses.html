@@ -1,52 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Courses - Flash Learning!</title>
-    <link rel="stylesheet" href="general.css">
-    <link rel="website icon" type="png" href="flash-images/site-logo.jpg">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlashLearn - Add Courses</title>
+    <link rel="stylesheet" href="general.css" />
+    <link rel="website icon" type="png" href="flash-images/site-logo.jpg" />
+    <script
+      src="https://kit.fontawesome.com/dc504b25b1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <style>
-        body{
-            background-image: url("flash-images/bg-7.jpg");
-        }
-        .main {
-            background-color: #ffc4bd;
-        }
-        .add {
-            background-color: #e6e6fa;
-        }
+      body {
+        background-image: url('flash-images/bg-7.jpg');
+      }
+      .main {
+        background-color: #ffc4bd;
+      }
+      .add {
+        background-color: #e6e6fa;
+      }
     </style>
 
     <div class="out">
-        <i></i>
-    </div> 
+      <i></i>
+    </div>
     <div class="js-done">
-        <i>all done</i>
-        <!-- this button sholud take me to the welcome back page -->
+      <style>
+        .js-done i {
+          font-size: 2rem;
+          margin-left: 0.6rem;
+          margin-bottom: 0.3rem;
+        }
+        .js-done {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-bottom: 1rem;
+        }
+      </style>
+      <i class="fa-regular fa-circle-check"></i>
+      All Done!
+      <!-- this button sholud take me to the welcome back page -->
     </div>
 
     <div class="main">
-        <div class="header"><h2>Add Your Courses</h2></div>
-        <div class="details">
-            <h3>So, what course are we going to be flash learning?</h3>
-            <div>
-                <ol>
-                    <li><input type="text" placeholder="add coursename here..." id="course-name"></li>
-                    <!-- <li><input type="image" placeholder="add image, if you want." id="course-image"></li> -->
-                    <li><input type="text" placeholder="extra info?" id="course-info"></li>
-                </ol>
-            </div>
-            <!-- this button should add only -->
-            <button class="add js-add1">
-                <i></i>
-                Add!
-            </button>
+      <div class="header"><h2>Add Your Courses</h2></div>
+      <div class="details">
+        <h3>So, what course are we going to be flash learning?</h3>
+        <div>
+          <ol>
+            <li>
+              <input
+                type="text"
+                placeholder="add coursename here..."
+                id="course-name"
+              />
+            </li>
+            <!-- <li><input type="image" placeholder="add image, if you want." id="course-image"></li> -->
+            <li>
+              <input type="text" placeholder="extra info?" id="course-info" />
+            </li>
+          </ol>
         </div>
+        <!-- this button should add only -->
+        <button class="add js-add1">
+          <i class="fa-solid fa-plus" style="margin-right: 0.5rem"></i>
+          Add!
+        </button>
+      </div>
     </div>
 
     <script src="add-courses.js" type="module"></script>
-</body>
+  </body>
 </html>

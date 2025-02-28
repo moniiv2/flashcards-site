@@ -1,63 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flash Learning - Welcome Back!</title>
-    <link rel="stylesheet" href="general.css">
-    <link rel="stylesheet" href="home02.css">
-    <link rel="website icon" type="png" href="flash-images/site-logo.jpg">
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlashLearn - Welcome Back!</title>
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="home02.css" />
+    <link rel="website icon" type="png" href="flash-images/site-logo.jpg" />
+    <script
+      src="https://kit.fontawesome.com/dc504b25b1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <style>
-        body{
-            background-image: url("flash-images/bg-2.jpg");
-        }
-        .main {
-            background-color: #faf9f6;
-        }
-        .add {
-            background-color: #e6e6fa;
-        }
+      body {
+        background-image: url('flash-images/bg-2.jpg');
+      }
+      .main {
+        background-color: #faf9f6;
+      }
+      .add {
+        background-color: #e6e6fa;
+      }
     </style>
 
     <div class="main">
-        <div class="header"><h1>Flash Learning!</h1></div>
-        <div class="body-area">
-            <h3>Welcome Back!</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente voluptates cum quam aut voluptatem hic nisi corporis vel odit, alias esse totam quas quidem tenetur excepturi provident quibusdam accusamus perferendis!</p>
-            <div class="all-courses">
-                <h3>Here are all your courses!</h3>
-                <div class="courses-list js-courselist">
-                    <a href="#">
-                        <div class="course-00">
-                            <h3>Course 01</h3>
-                            <p class="notes">note: you must studyyyy!</p> <i class="del">delete</i>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="course-00">
-                            <h3>Course 01</h3>
-                            <p class="notes">note: you must studyyyy!</p> <i class="del">delete</i>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="course-00">
-                            <h3>Course 01</h3>
-                            <p class="notes">note: you must studyyyy!</p> <i class="del">delete</i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <!-- this should take me to courses html to add course -->
-            <button class="add js-add">
-                <i></i>
-                Add more courses
-            </button>
+      <div class="header"><h1>FlashLearn!</h1></div>
+      <div class="body-area">
+        <h3>Welcome Back!</h3>
+        <p>
+          We know studying can be tough. That's why we created FlashLearn—a
+          simple and intuitive way to create and learn with flashcards. Whether
+          you're preparing for a test or just want to expand your knowledge,
+          we're here to help you succeed.
+        </p>
+        <div class="all-courses">
+          <h3>Here are all your courses!</h3>
+          <div class="courses-list js-courselist">
+            <a href="#">
+              <div class="course-00">
+                <h3>Course 01</h3>
+                <p class="notes">note: you must studyyyy!</p>
+                <i class="del">delete</i>
+              </div>
+            </a>
+            <a href="#">
+              <div class="course-00">
+                <h3>Course 01</h3>
+                <p class="notes">note: you must studyyyy!</p>
+                <i class="del">delete</i>
+              </div>
+            </a>
+            <a href="#">
+              <div class="course-00">
+                <h3>Course 01</h3>
+                <p class="notes">note: you must studyyyy!</p>
+                <i class="del">delete</i>
+              </div>
+            </a>
+          </div>
         </div>
+        <!-- this should take me to courses html to add course -->
+        <button class="add js-add">
+          <i class="fa-solid fa-plus" style="margin-right: 0.5rem"></i>
+          Add more courses
+        </button>
+      </div>
     </div>
 
     <script src="home02.js" type="module"></script>
-</body>
+  </body>
 </html>

@@ -1,4 +1,4 @@
-import { scrollToSection, getCourse, nextInput, nextPage } from "./general.js"
+import { scrollToSection, getCourse, nextInput, nextPage, del } from "./general.js"
 
 let courses = JSON.parse(localStorage.getItem('flash-courses'))
 console.log(courses)
@@ -8,6 +8,8 @@ function saveCourses (courses) {
 }
 
 console.log(getCourse(1).courseName)
+
+//create a function to render the page and delete prev html
 
 
 const url = new URL(window.location.href)
@@ -27,7 +29,7 @@ document.querySelector('.js-header').innerHTML = newHeader
 
 let questionsSummary = ``
 //how do you check for if an array is empty?
-if (!courseQuestions) {
+if (courseQuestions.length == 0) {
     document.querySelector('.js-questions').innerHTML = `
     <div class="no-quests">
         <h1>You have no questions for this course yet</h1>
@@ -38,11 +40,11 @@ courseQuestions.forEach((question, index) => {
     questionsSummary += `
       <div class = 'question-container'>
         <p class="question-00">
-        <a href="">
+        <a href="flash!.html?question-index=${index}&courseIndex=${courseIndex}">
         ${question.question}
         </a>
         </p> 
-        <i class = 'del'>delete</i> 
+        <i class="fa-solid fa-trash" class = "del js-del2" data-index = "${index}"></i> 
       </div>
     `
 })
@@ -90,10 +92,28 @@ document.querySelector('.js-add-q').addEventListener('click', () => {
 })
 
 nextPage('.js-out', 'home02.html')
-nextPage('.js-practice', `flash!.html?courseIndex=${courseIndex}`)
-
+if (courseQuestions.length !== 0) {
+nextPage('.js-practice', `flash!.html?courseIndex=${courseIndex}&question-index=${NaN}`)
+}  else {
+    document.querySelector('.js-practice').addEventListener('click', () => {
+        alert('you need to add questons first')
+    })
+}
 //next us is start practicing buttons
 
 //cross out all the console logs
+
+document.querySelectorAll('.js-del2').forEach((button) => {
+    button.addEventListener('click', () => {
+        let ind = button.dataset.index
+        console.log(ind)
+
+        courseQuestions = del(ind, courseQuestions)
+        currentCourse.questions = courseQuestions
+        courses[courseIndex] = currentCourse
+        saveCourses(courses)
+        window.location.reload()
+    })
+})
 
 

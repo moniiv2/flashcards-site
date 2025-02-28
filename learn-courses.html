@@ -1,73 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning My Courses!</title>
-    <link rel="stylesheet" href="general.css">
-    <link rel="stylesheet" href="learn-courses.css">
-    <link rel="website icon" type="png" href="flash-images/site-logo.jpg">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlashLearning My Courses!</title>
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="learn-courses.css" />
+    <link rel="website icon" type="png" href="flash-images/site-logo.jpg" />
+    <script
+      src="https://kit.fontawesome.com/dc504b25b1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  </head>
+  <body>
     <style>
-        body{
-            background-image: url("flash-images/bg-5.jpg");
-        }
-        .main {
-            background-color: #e0c4c8;
-        }
-        .practice, .add-q {
-            background-color: #e6e6fa;
-        }
+      body {
+        background-image: url('flash-images/bg-5.jpg');
+      }
+      .main {
+        background-color: #e0c4c8;
+      }
+      .practice,
+      .add-q {
+        background-color: #e6e6fa;
+      }
     </style>
 
     <div class="out js-out">
-        <i></i>
-        back
+        <style>
+            .out i {
+              font-size: 1.5rem;
+              margin-bottom: 0.3rem;
+            }
+            .out {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              margin-bottom: 1rem;
+            }
+          </style>
+        <i class="fa-solid fa-backward"></i>
+      back
     </div>
 
     <div class="main">
-        <div class="header js-header"><h2>Course_Name</h2>
+      <div class="header js-header"><h2>Course_Name</h2></div>
+      <p id="quest-intro">Your set questions will appear here...</p>
+      <!-- i should be able to add questions oo -->
+      <button class="add-q js-add-q">
+        <i class="fa-solid fa-plus" style="margin-right: 0.2rem"></i>
+        Add questions
+      </button>
+      <!-- the questions should be in LIFO order -->
+      <div class="questions js-questions">
+        <div class="question-container">
+          <p class="question-00"><a href="">what is your name?</a></p>
+          <i class="del">delete</i>
         </div>
-        <p id="quest-intro">Your set questions will appear here...</p> 
-        <!-- i should be able to add questions oo -->
-        <button class="add-q js-add-q">
-            <i></i>
-            Add questions
-        </button>
-        <!-- the questions should be in LIFO order -->
-        <div class="questions js-questions">
-            <div class="question-container">
-                <p class="question-00"><a href="">what is your name?</a></p> <i class="del">delete</i> 
-            </div>
-            <div class="question-container">
-                <p class="question-00"><a href="">what is your name?</a></p> <i class="del">delete</i> 
-            </div>
-            <div class="question-container">
-                <p class="question-00"><a href="">what is your name?</a></p> <i class="del">delete</i> 
-            </div>
+        <div class="question-container">
+          <p class="question-00"><a href="">what is your name?</a></p>
+          <i class="del">delete</i>
         </div>
+        <div class="question-container">
+          <p class="question-00"><a href="">what is your name?</a></p>
+          <i class="del">delete</i>
+        </div>
+      </div>
 
-        <div class="add-questions js-add-questions">
-            <h3>Add questions...</h3>
-            <input class = 'js-question' type="text" placeholder="question?">
-            <input class = 'js-answer' type="text" placeholder="answer...">
-            <!-- this would add my question and refresh the page -->
-            <button class="add-q js-addq">
-                <i></i>
-                Add!
-            </button>
-        </div>
-
-        <!-- this shoud take me to the practising page to show and next question i.e you need a page for this-->
-        <button class="practice js-practice">
-            <i></i>
-            Start Practicing
+      <div class="add-questions js-add-questions">
+        <h3>Add questions...</h3>
+        <input class="js-question" type="text" placeholder="question?" />
+        <input class="js-answer" type="text" placeholder="answer..." />
+        <!-- this would add my question and refresh the page -->
+        <button class="add-q js-addq">
+          <i class="fa-solid fa-plus" style="margin-right: 0.2rem"></i>
+          Add!
         </button>
+      </div>
+
+      <!-- this shoud take me to the practising page to show and next question i.e you need a page for this-->
+      <button class="practice js-practice">
+        <i class="fa-solid fa-bolt" style="margin-right: 0.4rem"></i></i>
+        Start Practicing
+      </button>
     </div>
 
-    
-
     <script src="learn-courses.js" type="module"></script>
-</body>
+  </body>
 </html>

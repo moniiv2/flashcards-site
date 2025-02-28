@@ -5,7 +5,13 @@
     text-align: center;
 }
 
-#show, .retry, .next {
+.main{
+    transition: transform 1.6s;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+button {
     font-size: medium;
     padding: 1rem 0.5rem;
     border-radius: 1rem;
@@ -13,6 +19,11 @@
     box-shadow: 5px 5px 3px grey; 
     background-color: #e6e6fa;
 }
+
+button:active {
+    transform: translateY(4px);
+}
+
 
 #show {
     margin: 0 auto;
@@ -32,3 +43,20 @@
 .next {
     text-align: right;
 }
+
+.display-1 {
+    transform: rotateY(180deg)
+}
+
+.js-display-1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+

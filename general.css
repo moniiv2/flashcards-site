@@ -4,6 +4,7 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: "Quicksand", serif, 'Times New Roman', Times, serif;
 }
 
 p {
@@ -12,6 +13,10 @@ p {
 
 i {
     cursor: pointer;
+    font-size: larger;
+}
+button {
+    font-family: "Quicksand", serif, 'Times New Roman', Times, serif;
 }
 /* 
     when you click an icon make it have a dashed border effect instead of the button click effect - idea from figma
@@ -54,6 +59,7 @@ i {
     position: sticky;
     bottom: 0;
     box-shadow: 5px 5px 3px grey;
+    font-family: "Quicksand", serif, 'Times New Roman', Times, serif;
 }
 .add:active {
     transform: translateY(4px);

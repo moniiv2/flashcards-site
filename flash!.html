@@ -1,51 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flash!</title>
-    <link rel="website icon" type="png" href="flash-images/site-logo.jpg">
-    <link rel="stylesheet" href="general.css">
-    <link rel="stylesheet" href="flash!.css">
-</head>
-<body>
+    <link rel="website icon" type="png" href="flash-images/site-logo.jpg" />
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="flash!.css" />
+  </head>
+  <script
+    src="https://kit.fontawesome.com/dc504b25b1.js"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet"
+  />
+  <body>
     <style>
-        .main {
-            background-image: url(flash-images/bg-7.jpg);
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-size: cover;
-            margin: auto;
-            width: 70%;
-            overflow-y: auto;
-            height: 24rem;
-        }
+      .main {
+        background-image: url(flash-images/bg-7.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: auto;
+        width: 70%;
+        overflow-y: auto;
+        height: 24rem;
+      }
     </style>
-    
+
     <div class="out">
-        <i></i>
-        back
+      <i></i>
+      back
     </div>
 
-    <div class="main js-display-1">
-        <h1 class="flash-q">what did you say?</h1>
+    <div class="main js-main">
+      <div class="js-display-1">
+        <h1 class="flash-q">Question question?</h1>
         <button id="show">
-            <i></i>
-            Show.
+          <i style="padding: 0 0.5rem"></i>
+          Show.
         </button>
+      </div>
+      <!-- <div class="js-display-2" style="display: hidden">
+        <p class="answer">Answer.</p>
+        <button class="retry js-retry">
+          <i></i>
+          Try Again
+        </button>
+        <button class="next js-next">
+          <i></i>
+          Next!
+        </button>
+      </div> -->
     </div>
-    <div class="main js-display-2">
-        <p class="answer">
-            i said no.
-        </p>
-        <button class="retry">
-            <i></i>
-            Try Again
-        </button>
-        <button class="next">
-            <i></i>
-            Next!
-        </button>
-    </div>
-</body>
+    <div class="flash-2"></div>
+
+    <script src="flash!.js" type="module">
+      // let questionIndex = JSON.parse(
+      //   new URL(window.location.href).searchParams.get('question-index')
+      // );
+      // if (typeof questionIndex !== 'undefined') {
+      //   require('child_process').exec('flash!-2.js');
+      // } else {
+      //   require('child_process').exec('flash!.js');
+      // }
+    </script>
+  </body>
 </html>
