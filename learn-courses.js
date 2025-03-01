@@ -7,7 +7,7 @@ function saveCourses (courses) {
     localStorage.setItem('flash-courses', JSON.stringify(courses))
 }
 
-console.log(getCourse(1).courseName)
+//console.log(getCourse(1).courseName)
 
 //create a function to render the page and delete prev html
 
@@ -45,11 +45,25 @@ courseQuestions.forEach((question, index) => {
         ${question.question}
         </a>
         </p> 
-        <i class="fa-solid fa-trash" class = "del js-del2" data-index = "${index}"></i> 
+        <div class = "js-del2" data-index = "${index}"><i class="fa-solid fa-trash" class = "del"></i></div> 
       </div>
     `
 })
 document.querySelector('.js-questions').innerHTML = questionsSummary
+
+document.querySelectorAll('.js-del2').forEach((icon) => {
+    icon.addEventListener('click', () => {
+        let ind = icon.dataset.index
+        console.log(ind)
+
+        courseQuestions = del(ind, courseQuestions)
+        currentCourse.questions = courseQuestions
+        courses[courseIndex] = currentCourse
+        saveCourses(courses)
+        window.location.reload()
+    })
+})
+
 }
 
 //up next work on the add questions button
@@ -104,17 +118,5 @@ nextPage('.js-practice', `flash!.html?courseIndex=${courseIndex}&question-index=
 
 //cross out all the console logs
 
-document.querySelectorAll('.js-del2').forEach((button) => {
-    button.addEventListener('click', () => {
-        let ind = button.dataset.index
-        console.log(ind)
-
-        courseQuestions = del(ind, courseQuestions)
-        currentCourse.questions = courseQuestions
-        courses[courseIndex] = currentCourse
-        saveCourses(courses)
-        window.location.reload()
-    })
-})
 
 
