@@ -32,6 +32,7 @@ let questionsSummary = ``
 if (courseQuestions.length == 0) {
     document.querySelector('.js-questions').innerHTML = `
     <div class="no-quests">
+        <h1>:(</h1>
         <h1>You have no questions for this course yet</h1>
     </div>
     `

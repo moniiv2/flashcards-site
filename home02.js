@@ -3,8 +3,8 @@ import { getCourse, nextPage, del } from "./general.js"
 let courses = JSON.parse(localStorage.getItem('flash-courses'))
 console.log(courses)
 
-if (courses == null) {
-    document.querySelector('.js-courselist').innerHTML = "<div class = 'header' style='border-bottom: none;'><h1>you have no courses yet</h1></div>"
+if (typeof courses == "undefined" || courses == null || courses.length == 0) {
+    document.querySelector('.all-courses').innerHTML = "<div class = 'header' style='border-bottom: none;'><h1>:(</h1><h1>you have no courses yet</h1></div>"
 } else {
     renderCoursesSummary()
 }

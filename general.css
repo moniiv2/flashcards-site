@@ -1,4 +1,6 @@
 body {
+    display: flex;
+    justify-content: center;
     background-color: black;
     padding: 5rem 3rem;
     background-attachment: fixed;
@@ -28,14 +30,80 @@ button {
     padding: 3rem 1rem;
     background-color: white;
     margin: auto;
-    width: 80%;
+    width: 85%;
     overflow-y: auto;
     height: 28rem;
 }
 
+@media screen and (min-width: 400px) and (max-width: 600px) {
+    .main {
+        width: 100%;
+        height: 40rem;
+    }
+    body {
+        padding: 6rem 2rem 4.5rem 2rem;
+    }
+}
+@media screen and (min-width: 380px) and (max-width: 400px) {
+    .main {
+        width: 100%;
+        height: 37rem;
+    }
+    body {
+        padding: 5rem 2rem 4.5rem 2rem;
+    }
+}
+/* @media screen and (min-width: 360) and (max-width: 750) {
+    .main {
+        width: 100%;
+        height: 37rem;
+    }
+    body {
+        padding: 5rem 2rem 4.5rem 2rem;
+    }
+} */
+@media screen and (min-width: 200px) and (max-width: 380px) {
+    .main {
+        width: 100%;
+        height: 32rem;
+    }
+    body {
+        padding: 4rem 1.5rem 4.5rem 1.5rem;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .main {
+        width: 100%;
+        height: 52rem;
+    }
+    body {
+        padding: 7rem 3.5rem 4.5rem 3.5rem;
+    }
+}
+@media screen and (width: 1024px) and (height: 1366px) {
+    .main {
+        width: 100%;
+        height: 59rem;
+    }
+    body {
+        padding: 8rem 4rem 4.5rem 4rem;
+    }
+}
+@media screen and (min-width: 1024px) and (min-height: 600px) {
+    .main {
+        width: 100%;
+        height: 22rem;
+    }
+    body {
+        padding: 4rem;
+    }
+}
+
+
 .main::-webkit-scrollbar {
     display: none;
 }
+
 
 .header {
     border-bottom: 2px grey solid;
@@ -71,5 +139,9 @@ input {
     border-radius: 1rem;
     margin-bottom: 1.5rem;
     margin-left: 7px;
+}
+
+ol {
+    padding-left: 1rem;
 }
 

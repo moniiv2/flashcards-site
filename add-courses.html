@@ -25,34 +25,31 @@
       .main {
         background-color: #ffc4bd;
       }
+      .header {
+      }
       .add {
         background-color: #e6e6fa;
       }
     </style>
 
-    <div class="out">
-      <i></i>
-    </div>
-    <div class="js-done">
-      <style>
-        .js-done i {
-          font-size: 2rem;
-          margin-left: 0.6rem;
-          margin-bottom: 0.3rem;
-        }
-        .js-done {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          margin-bottom: 1rem;
-        }
-      </style>
-      <i class="fa-regular fa-circle-check"></i>
-      All Done!
-      <!-- this button sholud take me to the welcome back page -->
-    </div>
-
     <div class="main">
+      <!-- <div class="js-done">
+        <style>
+          .js-done i {
+            font-size: 2rem;
+            margin-left: 0.6rem;
+            margin-bottom: 0.3rem;
+          }
+          .js-done {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 1rem;
+          }
+        </style>
+
+       
+      </div> -->
       <div class="header"><h2>Add Your Courses</h2></div>
       <div class="details">
         <h3>So, what course are we going to be flash learning?</h3>
@@ -71,11 +68,22 @@
             </li>
           </ol>
         </div>
+
+        <div style="display: flex; justify-content: space-between">
+          <buttton class="add js-done">
+            <i
+              class="fa-regular fa-circle-check"
+              style="margin-right: 0.5rem"
+            ></i>
+            Done!
+          </buttton>
+          <!-- this button sholud take me to the welcome back page -->
+          <button class="add js-add1">
+            <i class="fa-solid fa-plus" style="margin-right: 0.5rem"></i>
+            Add!
+          </button>
+        </div>
         <!-- this button should add only -->
-        <button class="add js-add1">
-          <i class="fa-solid fa-plus" style="margin-right: 0.5rem"></i>
-          Add!
-        </button>
       </div>
     </div>
 
