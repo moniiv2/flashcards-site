@@ -11,6 +11,20 @@
     perspective: 1000px;
 }
 
+/* @media screen and (min-width: 200px) and (max-width: 380px) {
+    .flash-main {
+        font-size: small;
+        height: 280rem;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .flash-main {
+        font-size: small;
+        height: 60rem;
+    }
+} */
+
 button {
     font-size: medium;
     padding: 1rem 0.5rem;

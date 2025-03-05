@@ -7,18 +7,17 @@
     <link rel="website icon" type="png" href="flash-images/site-logo.jpg" />
     <link rel="stylesheet" href="general.css" />
     <link rel="stylesheet" href="flash!.css" />
-  </head>
-  <script
-    src="https://kit.fontawesome.com/dc504b25b1.js"
-    crossorigin="anonymous"
-  ></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
-    rel="stylesheet"
-  />
-  <body>
+    <script
+      src="https://kit.fontawesome.com/dc504b25b1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
       body {
         display: flex;
@@ -32,16 +31,28 @@
         margin: auto;
         width: 70%;
         overflow-y: auto;
-        height: 24rem;
+        height: 26rem;
+      }
+
+      @media screen and (min-width: 200px) and (max-width: 380px) {
+        .main {
+          font-size: 14px;
+        }
+      }
+
+      @media screen and (min-width: 380px) and (max-width: 400px) {
+        .main {
+          font-size: 14px;
+        }
+        .answer {
+          font-size: 1.2rem;
+        }
       }
     </style>
+  </head>
 
-    <div class="out">
-      <i></i>
-      back
-    </div>
-
-    <div class="main js-main">
+  <body>
+    <div class="main js-main flash-main">
       <div class="js-display-1">
         <h1 class="flash-q">Question question?</h1>
         <button id="show">
@@ -61,7 +72,6 @@
         </button>
       </div> -->
     </div>
-    <div class="flash-2"></div>
 
     <script src="flash!.js" type="module">
       // let questionIndex = JSON.parse(

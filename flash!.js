@@ -190,6 +190,8 @@ function show () {
 }  //ending of else block
 
 
+
+
 //now work on try again button
 //what it does is to save the current question and ask it again
 //animations might not be necessary for this one
